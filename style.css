@@ -119,7 +119,8 @@ nav .btn {
   background: var(--card);
   padding: 1rem;
   border-radius: 10px;
-  box-sizing: border-box; /* Garante que padding e border não causem distorção */
+  /* Este é o código mais importante para evitar a distorção */
+  box-sizing: border-box;
 }
 .card img {
   width: 100%;
