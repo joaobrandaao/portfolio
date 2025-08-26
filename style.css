@@ -93,18 +93,9 @@ nav .btn {
   text-align: center;
 }
 .projects .grid {
-    display: flex; /* Muda para flexbox */
-    overflow-x: auto; /* Adiciona a rolagem horizontal */
-    gap: 20px; /* Adiciona espaço entre os cards */
-    padding-bottom: 20px; /* Adiciona espaço para a barra de rolagem */
-    flex-wrap: nowrap; /* Impede que os cards quebrem para a linha de baixo */
-    scroll-snap-type: x mandatory; /* Adiciona o efeito de "snap" na rolagem */
-}
-/* Garante que cada card tenha uma largura mínima para a rolagem */
-.projects .grid .card {
-    min-width: 300px;
-    scroll-snap-align: start;
-    /* As outras propriedades do seu card continuam aqui, como background, padding, etc. */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
 }
 .card {
   background: var(--card);
