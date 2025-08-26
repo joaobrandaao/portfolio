@@ -87,40 +87,20 @@ nav .btn {
   padding: 0;
 }
 
-/* PROJECTS & EXPERIENCE */
+/* PROJECTS */
 .projects {
   padding: 3rem 2rem;
   text-align: center;
 }
-/* Estilo padrão (para desktop): layout de grade que quebra a linha */
 .projects .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 1.5rem;
 }
-
-/* Estilo para telas pequenas (celular): adiciona rolagem horizontal */
-@media (max-width: 768px) {
-  .projects .grid {
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-  }
-  .projects .grid .card {
-    flex-shrink: 0;
-    min-width: 260px;
-    scroll-snap-align: start;
-  }
-}
-
-/* Classes comuns a todos os cards */
 .card {
   background: var(--card);
   padding: 1rem;
   border-radius: 10px;
-  /* Este é o código mais importante para evitar a distorção */
-  box-sizing: border-box;
 }
 .card img {
   width: 100%;
