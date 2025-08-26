@@ -213,3 +213,10 @@ footer {
     display: block;
   }
 }
+/* AJUSTES PARA OS LOGOS DE CONTATO */
+.contact-logo {
+  width: 25px; /* Define o tamanho da logo */
+  height: 25px;
+  vertical-align: middle; /* Alinha a logo verticalmente com o texto */
+  margin-right: 8px; /* Adiciona um pequeno espaço à direita da logo */
+}
