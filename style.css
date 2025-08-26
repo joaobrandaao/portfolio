@@ -89,30 +89,46 @@ nav .btn {
 
 /* PROJECTS */
 .projects {
-  padding: 3rem 2rem;
-  text-align: center;
+    padding: 3rem 2rem;
+    text-align: center;
 }
+
+/* Este é o código que vai forçar a rolagem horizontal */
 .projects .grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.5rem;
+    display: flex; /* Altera de grid para flex */
+    gap: 1.5rem; /* Mantém o espaçamento entre os cards */
+    flex-wrap: nowrap; /* Impede que os cards quebrem a linha */
+    overflow-x: auto; /* Adiciona a rolagem horizontal quando necessário */
+    padding-bottom: 20px; /* Adiciona um espaço extra na parte inferior */
+    
+    /* Configurações extras para uma rolagem mais suave e um alinhamento inicial */
+    scroll-snap-type: x mandatory;
 }
+
+/* Garante que os cards não encolham e tenham uma largura mínima */
+.projects .grid .card {
+    flex-shrink: 0;
+    min-width: 260px; /* Mantém a largura mínima original */
+    scroll-snap-align: start;
+}
+
+/* As outras classes, como .card, .card img e .tags, podem ficar como estão */
 .card {
-  background: var(--card);
-  padding: 1rem;
-  border-radius: 10px;
+    background: var(--card);
+    padding: 1rem;
+    border-radius: 10px;
 }
 .card img {
-  width: 100%;
-  border-radius: 6px;
+    width: 100%;
+    border-radius: 6px;
 }
 .tags span {
-  display: inline-block;
-  background: var(--accent);
-  color: #000;
-  margin: 2px;
-  padding: 0.2rem 0.5rem;
-  border-radius: 4px;
+    display: inline-block;
+    background: var(--accent);
+    color: #000;
+    margin: 2px;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
 }
 
 /* SKILLS */
